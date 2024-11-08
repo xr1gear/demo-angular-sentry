@@ -1,0 +1,19 @@
+<div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+  <div class="mb-3 col-3">
+    <label for="exampleFormControlInput1" class="form-label">User name:</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name" [(ngModel)]="sharedStateService.userName" >
+  </div>
+
+  <div class="mb-3 col-3">
+    <label for="exampleFormControlInput1" class="form-label">Location:</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Example: Detroit, MI" [(ngModel)]="sharedStateService.location">
+    <button class="form-control btn btn-primary mb-3" (click)="loadForecastWeather()">Get Weather</button>
+  </div>
+
+  <div class="mb-3 col-3">
+    <h4>Weather</h4>
+    <p class="form-label">Temperature: {{weather}}</p>
+    <p class="form-label">Pressure: {{pressure}}</p>
+    <p class="form-label">Description: {{description}}</p>
+  </div>
+</div>

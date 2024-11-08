@@ -5,14 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Router} from "@angular/router";
 import * as Sentry from '@sentry/angular';
+import { FunFormComponent } from './fun-form/fun-form.component';
+import { AngularCommandsComponent } from './angular-commands/angular-commands.component';
+import { MainComponent } from './main/main.component';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {SharedStateService} from "./shared-state.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FunFormComponent,
+    AngularCommandsComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     {
@@ -29,6 +40,7 @@ import * as Sentry from '@sentry/angular';
       deps: [Sentry.TraceService],
       multi: true,
     },
+
   ],
   bootstrap: [AppComponent]
 })
