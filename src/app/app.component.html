@@ -13,7 +13,7 @@
     </ul>
 
     <div class="col-md-3 text-end">
-      <button type="button" (click)="throwError()" class="btn btn-danger me-2">Cause Error</button>
+      <button type="button" (click)="throwError()" class="btn btn-danger me-2" *ngIf="isEnabledAfterUsernameAnd60SecondTimeout()">Cause Error</button>
       <button type="button" class="btn btn-link text-black">{{ sharedStateService.userName }}</button>
     </div>
   </header>
